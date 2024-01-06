@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+  import React, { useState } from 'react'
+  import One from './One'
+  import Quiz from './Quiz';
 
-export default App;
+  function App()
+  {
+    let [fruit, setfruit] = useState('jimmy-Shergil')
+    console.log(fruit, typeof fruit);
+    console.log(setfruit, typeof setfruit);
+
+    let one =()=>
+    {
+      if(fruit === 'jimmy-Shergil')
+      {
+        setfruit('Frank-Estein')
+      }  
+      else{
+        setfruit('jimmy-Shergil')
+      }
+    }
+    return (
+      <div>App
+        <h2>State has {fruit} </h2>
+        <button onClick={one}>CHANGE STATE</button>
+            
+            <hr/>
+            <hr/> <hr/> <hr/>
+
+            <One/>
+            {/* <Quiz/> */}
+      </div>
+    )
+  }
+  export default App
+
+ 
+
+  // rfce command line
